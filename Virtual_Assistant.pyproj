@@ -11,6 +11,8 @@
     <OutputPath>.</OutputPath>
     <Name>Virtual_Assistant</Name>
     <RootNamespace>Virtual_Assistant</RootNamespace>
+    <InterpreterId>MSBuild|Python 3.12|$(MSBuildProjectFullPath)</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +24,33 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Virtual_Assistant.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="..\..\..\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.12\">
+      <Id>Python 3.12</Id>
+      <Version>3.10</Version>
+      <Description>Python 3.12</Description>
+      <InterpreterPath>..\..\..\..\..\..\Local\Programs\Python\Python312\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>..\..\..\..\..\..\Local\Programs\Python\Python312\python.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>
+      </PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+    <Interpreter Include="Python3.12.10\">
+      <Id>Python3.12.10</Id>
+      <Version>3.12</Version>
+      <Description>Python3.12.10 (Python 3.12 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.12" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
